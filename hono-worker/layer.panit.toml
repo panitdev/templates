@@ -1,0 +1,16 @@
+[layer]
+schema_version = 1
+id   = "api"
+kind = "api"
+name = "API Layer"
+
+[dev]
+command = "bunx wrangler dev --ip 0.0.0.0 --port 8000"
+port    = 8000
+
+[build]
+command  = "bun run build"
+artifact = "dist/worker.js"
+
+[deploy]
+strategy = "static"
